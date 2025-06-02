@@ -1,0 +1,12 @@
+[Unit]
+Description=Monitoring script for test process
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/skyrex/test/monitor.sh
+Restart=on-failure
+RestartSec=60s
+
+[Install]
+WantedBy=multi-user.target
